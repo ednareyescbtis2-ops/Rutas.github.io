@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ruta de Senderismo</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#eef5e9;
+      color:#333;
+    }
+
+    /* HEADER */
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(35, 214, 53, 0.5), rgba(142, 194, 82, 0.5)),
+      url('img/portada.jpg');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:60px;
+      margin-bottom:20px;
+      text-shadow:2px 2px 10px black;
+    }
+
+    header p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 30px;
+      background:#2e7d32;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#1b5e20;
+      transform:scale(1.05);
+    }
+
+    /* GALERIA */
+    .galeria{
+      padding:60px 8%;
+      text-align:center;
+    }
+
+    .galeria h2{
+      font-size:40px;
+      color:#1b5e20;
+      margin-bottom:15px;
+    }
+
+    .galeria p{
+      margin-bottom:40px;
+      color:#555;
+    }
+
+    .contenedor-galeria{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .imagen{
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      position:relative;
+      cursor:pointer;
+    }
+
+    .imagen img{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      transition:0.5s;
+    }
+
+    .imagen:hover img{
+      transform:scale(1.1);
+    }
+
+    .texto{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      background:rgba(0,0,0,.6);
+      color:white;
+      padding:15px;
+      font-size:18px;
+    }
+
+    /* MAPA */
+    .mapa{
+      padding:60px 8%;
+      background:#dfead7;
+      text-align:center;
+    }
+
+    .mapa h2{
+      color:#1b5e20;
+      margin-bottom:20px;
+      font-size:40px;
+    }
+
+    iframe{
+      width:100%;
+      height:400px;
+      border:none;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,.2);
+    }
+
+    /* CONTACTO */
+    .contacto{
+      padding:60px 8%;
+      text-align:center;
+    }
+
+    .contacto h2{
+      font-size:40px;
+      color:#1b5e20;
+      margin-bottom:20px;
+    }
+
+    .whatsapp{
+      display:inline-block;
+      margin-top:20px;
+      padding:18px 35px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-size:20px;
+      transition:0.3s;
+    }
+
+    .whatsapp:hover{
+      transform:scale(1.08);
+      background:#128C7E;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#1b5e20;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+
+      header h1{
+        font-size:40px;
+      }
+
+      header p{
+        font-size:18px;
+      }
+
+      .galeria h2,
+      .mapa h2,
+      .contacto h2{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <header>
+    <div>
+      <h1>Ruta de Senderismo, Heroica Ciudad de Tlaxiaco, Oaxaca</h1>
+      <p>Explora paisajes increíbles y conecta con la naturaleza</p>
+
+      <a href="#contacto" class="btn">Reserva tu Ruta</a>
+    </div>
+  </header>
+
+  <!-- GALERIA -->
+  <section class="galeria">
+
+    <h2>Galería de las rutas que podras visitar </h2>
+    <p>
+      Ven y vive la aventura
+      <strong></strong>.
+    </p>
+
+    <div class="contenedor-galeria">
+
+      <!-- IMAGEN 1 -->
+      <div class="imagen">
+        <img src="img/arco.jpeg" alt="Arco">
+        <div class="texto">Arco</div>
+      </div>
+
+      <!-- IMAGEN 2 -->
+      <div class="imagen">
+        <img src="img/Tindica.jpeg" alt="Tindicas">
+        <div class="texto">Conoce estos increibles bosques</div>
+      </div>
+
+      <!-- IMAGEN 3 -->
+      <div class="imagen">
+        <img src="img/Lluvia.jpeg" alt="Lluvia">
+        <div class="texto">Luvia</div>
+      </div>
+
+      <!-- IMAGEN 4 -->
+      <div class="imagen">
+        <img src="img/Cima.jpeg" alt="Conquista la Cima">
+        <div class="texto">Cima</div>
+      </div>
+
+      <!-- IMAGEN 5 -->
+      <div class="imagen">
+        <img src="img/Rayo.jpeg" alt="Rayo de Luz">
+        <div class="texto">Rayo de Sol</div>
+      </div>
+
+      <!-- IMAGEN 6 -->
+      <div class="imagen">
+        <img src="img/Cruz.jpeg" alt="Cruz Negra">
+        <div class="texto">Cruz Negra</div>
+      </div>
+      <!-- IMAGEN 7 -->
+      <div class="imagen">
+        <img src="img/pasle.jpeg" alt="Pasle Unico">
+        <div class="texto">Pasle</div>
+      </div>
+      <!-- IMAGEN 8 -->
+      <div class="imagen">
+        <img src="img/yo.jpeg" alt="Recorriendo Senderos">
+        <div class="texto">Paz en los senderos</div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <section class="mapa">
+
+    <h2>Ubicación de la Ruta</h2>
+
+    <!-- CAMBIA EL LINK DEL MAPA -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15052.73301925357!2d-97.679!3d17.803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c61e8d0d5a0c2b%3A0x2c2cfc2e0c7a5f0!2sHuajuapan%20de%20Le%C3%B3n%2C%20Oax.!5e0!3m2!1ses!2smx!4v1710000000000!5m2!1ses!2smx"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <p>
+      Reserva tu próxima aventura y recibe información de rutas, horarios y costos.
+    </p>
+
+    <!-- CAMBIA EL NUMERO -->
+    <a class="whatsapp" 
+       href="https://wa.me/5219531718175" 
+       target="_blank">
+       📲 Contactar por WhatsApp
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ruta de Senderismo | Cultura Digital 2</p>
+  </footer>
+
+</body>
+</html>
